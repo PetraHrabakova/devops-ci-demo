@@ -39,8 +39,8 @@ jobs:
       - name: Build and publish updated image
         run: |
           mvn package
-          docker build . --tag ghcr.io/PetraHrabakova/devops-ci-demo:latest
-          docker push ghcr.io/PetraHrabakova/devops-ci-demo:latest
+          docker build . --tag ghcr.io/petrahrabakova/devops-ci-demo:latest
+          docker push ghcr.io/petrahrabakova/devops-ci-demo:latest
 
   update_coverage_report:
     needs: run_tests

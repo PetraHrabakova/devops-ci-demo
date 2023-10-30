@@ -2,10 +2,7 @@ name: CD -Deploy to Minikube using Github Actions
 on:
   #Trigger the workflow on push from the master/main branch or on pull request
   workflow_call:
-  push:
-    branches: [ master] # main
-  pull_request:
-    branches: [ master] # main
+  workflow_dispatch:
 jobs:
   # Build job
   job1:

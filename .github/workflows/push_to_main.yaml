@@ -53,9 +53,5 @@ jobs:
   trigger_cd_workflow:
     needs: [ update_coverage_report ] # Wait for the previous workflow to finish
     runs-on: ubuntu-latest
-    steps:
-      - name: Trigger CD Workflow
-        uses: ./.github/workflows/deploy-to-minikube.yaml
-        with:
-          workflow: 'CD - Deploy to Minikube using Github Actions'
+    uses: ./.github/workflows/deploy-to-minikube.yaml
 
